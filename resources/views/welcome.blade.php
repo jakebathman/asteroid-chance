@@ -35,7 +35,6 @@
                 poster="Asteroid (46376) 2001 XD3.webp"
                 class="h-1/3 mx-auto bg-gray-800"
                 exposure="0.04"
-                ar
                 shadow-intensity="0.5"
                 camera-target="0m 0m 0m"
                 auto-rotate
