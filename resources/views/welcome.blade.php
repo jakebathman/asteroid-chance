@@ -33,7 +33,7 @@
                 alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
                 src="/Asteroid (46376) 2001 XD3.gltf"
                 poster="Asteroid (46376) 2001 XD3.webp"
-                class="h-1/3 mx-auto bg-gray-800"
+                class="h-1/3 mx-auto"
                 exposure="0.04"
                 shadow-intensity="0.5"
                 camera-target="0m 0m 0m"
