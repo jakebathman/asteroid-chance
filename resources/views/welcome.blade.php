@@ -17,7 +17,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body x-data="asteroid">
+<body x-data="asteroid" class="bg-gray-800">
     <div class="w-full h-dvh bg-gray-800 relative overflow-hidden">
         <template
             x-for="i in meteorCount"
@@ -39,7 +39,7 @@
                 camera-target="0m 0m 0m"
                 auto-rotate
                 auto-rotate-delay="0"
-                touch-action="pan-y"
+                camera-controls
             ></model-viewer>
             <div class="font-doto text-3xl text-white/90 mt-10 w-full text-center flex flex-col items-center gap-4">
                 <div>Probability:</div>
