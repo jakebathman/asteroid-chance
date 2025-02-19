@@ -41,7 +41,6 @@
                 exposure="0.04"
                 shadow-intensity="0.5"
                 camera-target="0m 0m 0m"
-                touch-action="pan-y"
                 auto-rotate
                 auto-rotate-delay="0"
                 rotation-per-second="15deg"
