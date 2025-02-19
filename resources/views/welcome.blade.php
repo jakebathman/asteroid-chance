@@ -33,7 +33,6 @@
             ></span>
         </template>
         <div class="w-full h-full flex flex-col justify-between items-center py-8">
-            <div class="text-white">W: <span x-text="width"></span> H: <span x-text="height"></span></div>
             <model-viewer
                 alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
                 src="/Asteroid (46376) 2001 XD3.gltf"
