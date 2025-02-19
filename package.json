@@ -14,6 +14,7 @@
     },
     "dependencies": {
         "@alpinejs/persist": "^3.14.8",
+        "@alpinejs/resize": "^3.14.8",
         "@tailwindcss/vite": "^4.0.7",
         "alpinejs": "^3.14.8",
         "tailwindcss": "^4.0.7"

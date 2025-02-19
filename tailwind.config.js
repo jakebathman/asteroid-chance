@@ -26,7 +26,7 @@ export default {
                     },
                     "70%": { opacity: 1 },
                     "100%": {
-                        transform: "rotate(0deg) translateX(-1000px)",
+                        transform: "rotate(0deg) translateX(-2000px)",
                         opacity: 0,
                     },
                 },
