@@ -99,13 +99,13 @@
                             title="Close Torino Scale info box"
                             @click="showTsHelp = false"
                         >X</div>
-                        <div class="font-bold">A Torino Scale value of {{ $asteroid->detail->ts_max }} means:</div>
+                        <div class="">A Torino Scale value of <span class="text-white font-bold">{{ $asteroid->detail->ts_max }}</span> means:</div>
                         <div x-text="tsText">
                         </div>
                         <div>More info: <a
                                 href="https://cneos.jpl.nasa.gov/sentry/torino_scale.html"
                                 target="_blank"
-                                class="text-white/80 hover:underline"
+                                class="text-white/90 font-bold hover:underline"
                             >CNEOS Torino Scale</a>
                         </div>
                     </div>
