@@ -152,9 +152,7 @@
             },
 
             tsMax() {
-                console.log('tsMax', this.asteroid.detail.ts_max, this.asteroid);
                 let ts = parseInt(this.asteroid.detail.ts_max);
-                console.debug(Array(ts).fill(1))
                 return Array(ts).fill(1)
                 let halfValue = ts / 2;
                 let result = Array(Math.floor(halfValue)).fill(1);
@@ -162,8 +160,6 @@
                 if (!Number.isInteger(halfValue)) {
                     result.push(0.5);
                 }
-
-                console.log('tsMax', result);
 
                 return result;
             },
