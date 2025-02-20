@@ -11,6 +11,9 @@ Route::get('/', function () {
 
     $asteroid = SpaceObject::find(Cache::get('highest_risk'));
 
+    // Force to use 2024 YR4 for now
+    $asteroid = SpaceObject::where('designation', '2024 YR4')->first();
+
     return view('welcome', [
         'asteroid' => $asteroid,
     ]);

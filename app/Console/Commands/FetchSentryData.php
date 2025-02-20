@@ -33,11 +33,12 @@ class FetchSentryData extends Command
                     'sentry_id' => $o['id'],
                     'fullname' => $o['fullname'],
                     'ip' => $ip,
+                    'ts_max' => $o['ts_max'],
                 ]
             );
 
             // If Impact Probability is greater than 0.01, we will fetch details
-            if ($ip >= 0.01) {
+            if ($ip >= 0.0001) {
                 $detail = Http::withOptions(['verify' => false])->get($url . '?des=' . $designation)->json();
 
                 $impacts = collect(Arr::get($detail, 'data', []))->map(function ($impact) {
@@ -74,7 +75,8 @@ class FetchSentryData extends Command
         // Get the asteroid with the highest impact probability, according to
         // the highest ps_cum value (Palermo Scale Cumulative Rating)
         $highestRisk = SpaceObject::with('detail')->get()->sortByDesc(function ($obj) {
-            return $obj->detail->ps_cum ?? -9999;
+            // return $obj->detail->ps_cum ?? -9999;
+            return $obj->detail->ts_max ?? -9999;
         })->first();
 
         Cache::put('highest_risk', $highestRisk->id);
