@@ -140,61 +140,15 @@
 <script>
     // Handles loading the events for <model-viewer>'s slotted progress bar
     document.addEventListener('alpine:init', () => {
-        Alpine.magic('motion', () => (el, show) => {
-            import('https://cdn.jsdelivr.net/npm/@motionone/dom/+esm').then(({
-                animate
-            }) => {
-                if (show) {
-                    animate(el, {
-                        opacity: 1,
-                        scale: 1
-                    }, {
-                        duration: 0.4,
-                        easing: 'ease-out'
-                    });
-                } else {
-                    animate(el, {
-                        opacity: 0,
-                        scale: 0.8
-                    }, {
-                        duration: 0.3,
-                        easing: 'ease-in'
-                    }).finished.then(() => {
-                        el.style.display = "none";
-                    });
-                }
-            });
-        });
-
-        Alpine.directive('motion', (el, {
-            expression
-        }, {
-            effect
-        }) => {
-            effect(() => {
-                const show = Alpine.evaluate(el, expression);
-                if (show) {
-                    el.style.display = "block";
-                    Alpine.magic('motion')(el, true);
-                } else {
-                    Alpine.magic('motion')(el, false);
-                }
-            });
-        });
         Alpine.data('asteroid', () => ({
             asteroid: @json($asteroid),
             meteorCount: 50,
             width: window.innerWidth,
             height: window.innerHeight,
-            showTsHelp: true,
+            showTsHelp: false,
 
             init() {
                 console.log('Hi, nerds');
-
-                animate(".animateip", {
-                    rotate: 360
-                })
-
             },
 
             tsMax() {
