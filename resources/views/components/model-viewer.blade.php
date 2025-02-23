@@ -1,5 +1,5 @@
 <model-viewer
-    {{ $attributes->merge(['shadow-intensity' => '0.5', 'exposure' => '0.08']) }}
+    {{ $attributes->merge(['shadow-intensity' => '0.5', 'exposure' => '0.068']) }}
     alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
     src="/Asteroid (46376) 2001 XD3.gltf"
     poster="Asteroid (46376) 2001 XD3.webp"
