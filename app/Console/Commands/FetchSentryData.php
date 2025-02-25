@@ -38,7 +38,7 @@ class FetchSentryData extends Command
             );
 
             // If Impact Probability is greater than 0.01, we will fetch details
-            if ($ip >= 0.0001) {
+            if ($ip >= 0.00001) {
                 $detail = Http::withOptions(['verify' => false])->get($url . '?des=' . $designation)->json();
 
                 $impacts = collect(Arr::get($detail, 'data', []))->map(function ($impact) {
